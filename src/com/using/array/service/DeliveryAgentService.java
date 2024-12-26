@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DeliveryAgentService {
-    private ArrayList deliveryAgents = new ArrayList();
+    private ArrayList<DeliveryAgent> deliveryAgents = new ArrayList<>();
     private Scanner sc = new Scanner(System.in);
 
     void printCustomer(DeliveryAgent da){
 
         System.out.println(da);
     }
-    private DeliveryAgent createDeliveryAgent(){
+    public DeliveryAgent createDeliveryAgent(){
 
         System.out.println("Please enter id");
         int id = Integer.parseInt(sc.nextLine());
@@ -37,7 +37,7 @@ public class DeliveryAgentService {
     }
 
     public void displayDeliveryAgent(){
-        for(Object da : deliveryAgents){
+        for(DeliveryAgent da : deliveryAgents){
             System.out.println("Customer Info: " + da);
         }
     }

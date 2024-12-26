@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RestaurantService {
-    private ArrayList restaurants = new ArrayList();
+    private ArrayList<Restaurant> restaurants = new ArrayList<>();
     private Scanner sc = new Scanner(System.in);
 
     void printCustomer(Restaurant r){
 
         System.out.println(r);
     }
-    private Restaurant createRestaurant(){
+    public Restaurant createRestaurant(){
 
             System.out.println("Please enter registerNo");
             int registerNo = Integer.parseInt(sc.nextLine());
@@ -38,7 +38,7 @@ public class RestaurantService {
             return r;
         }
     public void displayRestaurant(){
-        for(Object r : restaurants){
+        for(Restaurant r : restaurants){
             System.out.println("Customer Info: " + r);
         }
     }

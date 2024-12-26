@@ -7,14 +7,14 @@ import java.util.Scanner;
 
 public class OrderService {
 
-    private ArrayList orders = new ArrayList();
+    private ArrayList<Order> orders = new ArrayList<>();
     private Scanner sc = new Scanner(System.in);
 
     void printCustomer(Order o){
 
         System.out.println(o);
     }
-    private Order createOrder(){
+    public Order createOrder(){
 
             System.out.println("Please enter id");
             int id = Integer.parseInt(sc.nextLine());
@@ -38,7 +38,7 @@ public class OrderService {
             return o;
         }
     public void displayCustomers(){
-        for(Object o : orders){
+        for(Order o : orders){
             System.out.println("Customer Info: " + o);
         }
     }

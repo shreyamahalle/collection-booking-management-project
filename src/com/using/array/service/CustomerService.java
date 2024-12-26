@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class CustomerService {
 
 
-    private ArrayList customers = new ArrayList();
+    private ArrayList<Customer> customers = new ArrayList<>();
     private Scanner sc = new Scanner(System.in);
 
     void printCustomer(Customer customer){
@@ -41,7 +41,7 @@ public class CustomerService {
         return customer;
     }
     public void displayCustomers(){
-        for(Object customer : customers){
+        for(Customer customer : customers){
             System.out.println("Customer Info: " + customer);
         }
     }

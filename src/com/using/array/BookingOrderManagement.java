@@ -33,6 +33,7 @@ public class BookingOrderManagement {
                     CustomerService customerService = new CustomerService();
                     customerService.createCustomer();
                     Customer customer = new Customer();
+                    customerService.displayCustomers();
                     System.out.println("Customer created : " + customer);
                     break;
             }
@@ -40,6 +41,8 @@ public class BookingOrderManagement {
                 case 2:
                     DeliveryAgentService deliveryAgentService = new DeliveryAgentService();
                     DeliveryAgent deliveryAgent = new DeliveryAgent();
+                    deliveryAgentService.displayDeliveryAgent();
+                    deliveryAgentService.createDeliveryAgent();
                     System.out.println("DeliveryAgent created : " + deliveryAgent);
                     break;
             }
@@ -47,14 +50,21 @@ public class BookingOrderManagement {
                 case 3:
                     OrderService orderService = new OrderService();
                     Order order = new Order();
+                    orderService.displayCustomers();
+                    orderService.createOrder();
                     System.out.println("Order created : " + order);
+                    break;
             }
             switch (option) {
                 case 4:
                     RestaurantService restaurantService = new RestaurantService();
                     Restaurant restaurant = new Restaurant();
+                    restaurantService.displayRestaurant();
+                    restaurantService.createRestaurant();
                     System.out.println("Restaurant created : " + restaurant);
-
+                    break;
+                default:
+                    System.out.println("Invalid data");
             }
 
 
