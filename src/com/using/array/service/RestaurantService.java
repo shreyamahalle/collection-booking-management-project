@@ -10,9 +10,9 @@ public class RestaurantService {
     private ArrayList restaurants = new ArrayList();
     private Scanner sc = new Scanner(System.in);
 
-    void printCustomer(Restaurant restaurant){
+    void printCustomer(Restaurant r){
 
-        System.out.println(restaurant);
+        System.out.println(r);
     }
     private Restaurant createRestaurant(){
 
@@ -34,11 +34,12 @@ public class RestaurantService {
             r.setName(name);
             r.setCity(city);
             r.setArea(area);
+            restaurants.add(r);
             return r;
         }
     public void displayRestaurant(){
-        for(Object restaurant : restaurants){
-            System.out.println("Customer Info: " + restaurant);
+        for(Object r : restaurants){
+            System.out.println("Customer Info: " + r);
         }
     }
 }

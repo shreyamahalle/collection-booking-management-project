@@ -10,9 +10,9 @@ public class OrderService {
     private ArrayList orders = new ArrayList();
     private Scanner sc = new Scanner(System.in);
 
-    void printCustomer(Order order){
+    void printCustomer(Order o){
 
-        System.out.println(order);
+        System.out.println(o);
     }
     private Order createOrder(){
 
@@ -34,12 +34,12 @@ public class OrderService {
             o.setPaymentMethod(paymentMethod);
             o.setNote(note);
             o.setType(type);
-            orders.add(orders);
+            orders.add(o);
             return o;
         }
     public void displayCustomers(){
-        for(Object order : orders){
-            System.out.println("Customer Info: " + order);
+        for(Object o : orders){
+            System.out.println("Customer Info: " + o);
         }
     }
 }

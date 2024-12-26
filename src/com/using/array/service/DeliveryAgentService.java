@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DeliveryAgentService {
-    private ArrayList deliveryAgent = new ArrayList();
+    private ArrayList deliveryAgents = new ArrayList();
     private Scanner sc = new Scanner(System.in);
 
-    void printCustomer(DeliveryAgent deliveryAgentservice){
+    void printCustomer(DeliveryAgent da){
 
-        System.out.println(deliveryAgentservice);
+        System.out.println(da);
     }
     private DeliveryAgent createDeliveryAgent(){
 
@@ -32,13 +32,13 @@ public class DeliveryAgentService {
         da.setName(name);
         da.setCity(city);
         da.setMobileNo(mobileNo);
-        deliveryAgent.add(deliveryAgent);
+        deliveryAgents.add(da);
         return da;
     }
 
     public void displayDeliveryAgent(){
-        for(Object deliveryAgentservice : deliveryAgent){
-            System.out.println("Customer Info: " + deliveryAgentservice);
+        for(Object da : deliveryAgents){
+            System.out.println("Customer Info: " + da);
         }
     }
 }
