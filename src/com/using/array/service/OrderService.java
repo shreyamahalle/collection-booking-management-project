@@ -15,7 +15,7 @@ public class OrderService {
         System.out.println(o);
     }
     public Order createOrder(){
-
+            Order o = new Order();
             System.out.println("Please enter id");
             int id = Integer.parseInt(sc.nextLine());
 
@@ -28,7 +28,6 @@ public class OrderService {
             System.out.println("Please enter paymentMethod");
             String paymentMethod = sc.nextLine();
 
-            Order o = new Order();
 
             o.setId(id);
             o.setPaymentMethod(paymentMethod);

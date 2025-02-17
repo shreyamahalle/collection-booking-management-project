@@ -43,7 +43,7 @@ public class BookingOrderManagement {
                     DeliveryAgent deliveryAgent = new DeliveryAgent();
                     deliveryAgentService.displayDeliveryAgent();
                     deliveryAgentService.createDeliveryAgent();
-                    System.out.println("DeliveryAgent created : " + deliveryAgent);
+                    //System.out.println("DeliveryAgent created : " + deliveryAgent);
                     break;
             }
             switch (option) {
@@ -63,8 +63,7 @@ public class BookingOrderManagement {
                     restaurantService.createRestaurant();
                     System.out.println("Restaurant created : " + restaurant);
                     break;
-                default:
-                    System.out.println("Invalid data");
+
             }
 
 

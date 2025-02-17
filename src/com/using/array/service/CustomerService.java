@@ -31,7 +31,6 @@ public class CustomerService {
         System.out.println("Please enter age:");
         int age = Integer.parseInt(sc.nextLine());
 
-       // Customer c = new Customer();
         customer.setId(id);
         customer.setAge(age);
         customer.setCity(city);
