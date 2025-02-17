@@ -40,6 +40,7 @@ public class BookingOrderManagement {
             switch (option) {
                 case 2:
                     DeliveryAgentService deliveryAgentService = new DeliveryAgentService();
+                    deliveryAgentService.createDeliveryAgent();
                     DeliveryAgent deliveryAgent = new DeliveryAgent();
                     deliveryAgentService.displayDeliveryAgent();
                     deliveryAgentService.createDeliveryAgent();
@@ -49,6 +50,7 @@ public class BookingOrderManagement {
             switch (option) {
                 case 3:
                     OrderService orderService = new OrderService();
+                    orderService.createOrder();
                     Order order = new Order();
                     orderService.displayCustomers();
                     orderService.createOrder();
@@ -58,6 +60,7 @@ public class BookingOrderManagement {
             switch (option) {
                 case 4:
                     RestaurantService restaurantService = new RestaurantService();
+                    restaurantService.createRestaurant();
                     Restaurant restaurant = new Restaurant();
                     restaurantService.displayRestaurant();
                     restaurantService.createRestaurant();
