@@ -1,6 +1,8 @@
  package com.using.array.model;
 
-public class Customer {
+ import java.util.Objects;
+
+ public class Customer {
     private int id;
     private String name;
     private String city;
@@ -57,4 +59,16 @@ public class Customer {
     public void setAge(int age) {
         this.age = age;
     }
-}
+
+     @Override
+     public boolean equals(Object o) {
+         if (o == null || getClass() != o.getClass()) return false;
+         Customer customer = (Customer) o;
+         return id == customer.id;
+     }
+
+     @Override
+     public int hashCode() {
+         return Objects.hashCode(id);
+     }
+ }

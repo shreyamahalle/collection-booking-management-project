@@ -15,7 +15,6 @@ public class BookingOrderManagement {
 
     public static void main(String[] args) {
 
-
         int option = 0;
         do {
             System.out.println("-----------Booking Management-----------");
