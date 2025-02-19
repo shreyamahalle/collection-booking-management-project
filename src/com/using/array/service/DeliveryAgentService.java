@@ -32,6 +32,11 @@ public class DeliveryAgentService {
         deliveryAgent.setName(name);
         deliveryAgent.setCity(city);
         deliveryAgent.setMobileNo(mobileNo);
+        if(deliveryAgents.contains(deliveryAgent))
+            System.out.println("Already present ");
+        else{
+            deliveryAgents.add(deliveryAgent);
+        }
         deliveryAgents.add(deliveryAgent);
         return deliveryAgent;
     }
