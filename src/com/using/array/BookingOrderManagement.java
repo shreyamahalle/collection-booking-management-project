@@ -3,10 +3,7 @@ import com.using.array.model.Customer;
 import com.using.array.model.DeliveryAgent;
 import com.using.array.model.Order;
 import com.using.array.model.Restaurant;
-import com.using.array.service.CustomerService;
-import com.using.array.service.DeliveryAgentService;
-import com.using.array.service.OrderService;
-import com.using.array.service.RestaurantService;
+import com.using.array.service.*;
 
 import java.util.Scanner;
 public class BookingOrderManagement {
@@ -23,6 +20,7 @@ public class BookingOrderManagement {
             System.out.println("2. Create delivery agent");
             System.out.println("3. Create restaurant ");
             System.out.println("4. Create order");
+            System.out.println("5. Show all data");
             System.out.println("0. Exit project");
             System.out.println("Select the option..");
             option = Integer.parseInt(sc.nextLine());
@@ -69,8 +67,13 @@ public class BookingOrderManagement {
                     break;
 
             }
-
-
+            switch (option){
+                case 5:
+                    ShowAllDataService showallDataService = new ShowAllDataService();
+                    showallDataService.createShowAllData();
+                    showallDataService.displayShow();
+                    break;
+            }
         } while (option != 0);
 
         System.out.println("THANK YOU!");
