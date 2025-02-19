@@ -40,10 +40,12 @@ public class BookingOrderManagement {
                 case 2:
                     DeliveryAgentService deliveryAgentService = new DeliveryAgentService();
                     deliveryAgentService.createDeliveryAgent();
-                    DeliveryAgent deliveryAgent = new DeliveryAgent();
+                    deliveryAgentService.deleteDeliveryAgent(1);
+                    deliveryAgentService.displayDeliveryAgent();
+                    DeliveryAgent dAgent = new DeliveryAgent();
                     deliveryAgentService.displayDeliveryAgent();
                     deliveryAgentService.createDeliveryAgent();
-                    //System.out.println("DeliveryAgent created : " + deliveryAgent);
+                    System.out.println("DeliveryAgent created : " + dAgent);
                     break;
             }
             switch (option) {

@@ -13,6 +13,7 @@ public class DeliveryAgentService {
 
         System.out.println(deliveryAgent);
     }
+
     public DeliveryAgent createDeliveryAgent(){
 
         DeliveryAgent deliveryAgent = new DeliveryAgent();
@@ -40,12 +41,20 @@ public class DeliveryAgentService {
         deliveryAgents.add(deliveryAgent);
         return deliveryAgent;
     }
+    public DeliveryAgent deleteDeliveryAgent(int deleteDeliveryAgentId){
+        DeliveryAgent removedDeliveryAgent = deliveryAgents.remove(deleteDeliveryAgentId);
+        return removedDeliveryAgent;
+    }
+    public DeliveryAgent displayDeliveryAgent(int deleteDeliveryAgentId){
+        DeliveryAgent deliveryAgent = deliveryAgents.get(deleteDeliveryAgentId);
+        return deliveryAgent;
+    }
+
 
     public void displayDeliveryAgent(){
         for(DeliveryAgent deliveryAgent : deliveryAgents){
             System.out.println("Customer Info: " + deliveryAgent);
         }
-    }
 }
-
+}
 
